@@ -35,9 +35,10 @@
                     <span class="say">有点傻但真的很可爱</span><br>
                     <br>
                     <span class="say">我们相遇、相知、然后相爱</span><br>
-                    <span class="say">我很喜欢《日常》里的那句话</span><br>
+                    <span class="say">我很喜欢日常里的那句话</span><br>
                     <span class="say">我们所度过的每一个日常 也许就是连续发生的奇迹</span><br>
                     <span class="say">所以让我好好的爱你</span><br>
+                    <span class="say">好好的爱着你</span><br>
                     <br>
                     <span class="say">我爱你一定爱到花都开了 鸟儿把歌唱</span><br>
                     <span class="say">爱到牛郎织女为我们点头</span><br>
@@ -58,7 +59,7 @@
                     target="_blank">梁梁</a> 在一起的
                 <div id="clock"></div>
             </div>
-            <canvas id="canvas" width="1100" height="880"></canvas>
+            <canvas id="canvas" width="1100" height="680"></canvas>
         </div>
 
     </div>
@@ -169,13 +170,13 @@
             }));
 
             var moveAnimate = eval(Jscex.compile("async", function () {
-                tree.snapshot("p1", 240, 0, 610, 880);
+                tree.snapshot("p1", 240, 0, 610, 680);
                 while (tree.move("p1", 500, 0)) {
                     foot.draw();
                     $await(Jscex.Async.sleep(10));
                 }
                 foot.draw();
-                tree.snapshot("p2", 500, 0, 610, 880);
+                tree.snapshot("p2", 500, 0, 610, 680);
 
                 // 会有闪烁不得意这样做, (＞﹏＜)
                 canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
