@@ -13,6 +13,7 @@ $(window).resize(function() {
     if (newWidth != clientWidth && newHeight != clientHeight) {
         location.replace(location);
     }
+    setInterval("toggleSound()",1);
 });
 
 (function($) {
@@ -57,4 +58,14 @@ function timeElapse(date){
 	}
 	var result = "第 <span class=\"digit\">" + days + "</span> 天 <span class=\"digit\">" + hours + "</span> 小时 <span class=\"digit\">" + minutes + "</span> 分钟 <span class=\"digit\">" + seconds + "</span> 秒"; 
 	$("#clock").html(result);
+}
+
+function toggleSound() {
+    var music = document.getElementById("media");//获取ID
+        console.log(music);
+        console.log(music.paused);
+    if (music.paused) { //判读是否播放
+        music.paused=false;
+        music.play(); //没有就播放
+    }
 }
